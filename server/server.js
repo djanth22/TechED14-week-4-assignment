@@ -20,3 +20,10 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   res.json({ message: "this is the root route" });
 });
+
+app.post("/form", (req, res) => {
+  const bodyData = req.body;
+  console.log(bodyData);
+
+  res.json({ message: "body data recieved" });
+});
