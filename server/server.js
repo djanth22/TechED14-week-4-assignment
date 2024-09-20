@@ -12,8 +12,8 @@ export const db = new pg.Pool({
   connectionString: dbConnectionString,
 });
 
-const PORT = "https://teched14-week-4-assignment.onrender.com";
-app.listen(PORT, () => {
+const baseUrl = "https://teched14-week-4-assignment.onrender.com/";
+app.listen(baseUrl, () => {
   console.log(`server is running in port ${PORT}`);
 });
 
