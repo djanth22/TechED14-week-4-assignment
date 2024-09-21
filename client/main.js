@@ -7,7 +7,7 @@ function handleSubmit(event) {
   event.preventDefault();
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
-  fetch(`${process.env.PORT || 8080}/newFeedback`, {
+  fetch(`${process.env.PORT}/newFeedback`, {
     method: "POST",
     headers: {
       "content-type": "application/json",

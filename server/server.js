@@ -12,8 +12,8 @@ export const db = new pg.Pool({
   connectionString: dbConnectionString,
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+const port = process.env.PORT;
+app.listen(port, () => {
   console.log(`server is running in port ${PORT}`);
 });
 
