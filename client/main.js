@@ -22,5 +22,4 @@ feedbackForm.addEventListener("submit", handleSubmit);
 // testing imported stuff from other js on server to use for getting the server information
 // will need a foreach loop here somewhere
 
-import { dbConnectionString } from "../server/server.js";
-import { db } from "../server/server.js";
+const feedbackContainer = document.getElementById(`feedback-container`);
