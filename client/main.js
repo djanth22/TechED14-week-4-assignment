@@ -7,7 +7,7 @@ function handleSubmit(event) {
   event.preventDefault();
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
-  fetch(`${process.env.PORT}/newFeedback`, {
+  fetch(`http://localhost:8080/newFeedback`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -23,3 +23,11 @@ feedbackForm.addEventListener("submit", handleSubmit);
 // will need a foreach loop here somewhere
 
 const feedbackContainer = document.getElementById(`feedback-container`);
+
+async function database() {
+  const dbData = await fetch(`http://localhost:8080/feedback`);
+  const table = await dbData.json();
+  console.log(table);
+}
+
+database();

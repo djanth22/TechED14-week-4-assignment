@@ -10,12 +10,11 @@ app.use(express.json());
 export const dbConnectionString = process.env.DATABASE_URL;
 export const db = new pg.Pool({
   connectionString: dbConnectionString,
-  ssl: { rejectUnauthorized: false },
 });
 
-const port = process.env.PORT;
-app.listen(port, () => {
-  console.log(`server is running in port ${port}`);
+const PORT = 8080;
+app.listen(PORT, () => {
+  console.log(`server is running in port ${PORT}`);
 });
 
 app.get("/", (req, res) => {
