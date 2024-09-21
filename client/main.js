@@ -1,5 +1,6 @@
 console.log("test");
 
+// form handler and listener
 const feedbackForm = document.getElementById("form");
 
 function handleSubmit(event) {
@@ -16,3 +17,10 @@ function handleSubmit(event) {
 }
 
 feedbackForm.addEventListener("submit", handleSubmit);
+
+// attempting to get the database rendered on screen by creating elements
+// testing imported stuff from other js on server to use for getting the server information
+// will need a foreach loop here somewhere
+
+import { dbConnectionString } from "../server/server.js";
+import { db } from "../server/server.js";

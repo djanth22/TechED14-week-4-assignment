@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-const dbConnectionString = process.env.DATABASE_URL;
+export const dbConnectionString = process.env.DATABASE_URL;
 export const db = new pg.Pool({
   connectionString: dbConnectionString,
 });
