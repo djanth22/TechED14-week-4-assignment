@@ -3,14 +3,9 @@ import pg from "pg";
 import cors from "cors";
 import dotenv from "dotenv";
 
-const corsOptions = {
-  origin: process.env.PORT,
-  optionsSuccessStatus: 200,
-};
-
 dotenv.config();
 const app = express();
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 export const dbConnectionString = process.env.DATABASE_URL;
 export const db = new pg.Pool({
@@ -20,7 +15,7 @@ export const db = new pg.Pool({
 
 const port = process.env.PORT;
 app.listen(port, () => {
-  console.log(`server is running in port ${PORT}`);
+  console.log(`server is running in port ${port}`);
 });
 
 app.get("/", (req, res) => {
