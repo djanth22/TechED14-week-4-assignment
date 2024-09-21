@@ -6,9 +6,11 @@ function handleSubmit(event) {
   event.preventDefault();
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
-  fetch("http://localhost:8080/form", {
+  fetch("http://localhost:8080/newFeedback", {
     method: "POST",
-    headers: { "content-type": "application/json" },
+    headers: {
+      "content-type": "application/json",
+    },
     body: JSON.stringify({ formValues }),
   });
 }

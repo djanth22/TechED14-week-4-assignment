@@ -21,9 +21,22 @@ app.get("/", (req, res) => {
   res.json({ message: "this is the root route" });
 });
 
-app.post("/form", (req, res) => {
+app.get("/feedback", (req, res) => {
+  res.json({ message: "feedback" });
+});
+
+app.post("/newFeedback", (req, res) => {
   const bodyData = req.body;
+  res.json({ message: "feedback" });
   console.log(bodyData);
 
-  res.json({ message: "body data recieved" });
+  db.query(
+    `INSERT INTO feedback (name, location, how_did_you_find_us, your_thoughts) VALUES ($1, $2, $3, $4)`,
+    [
+      bodyData.formValues.name,
+      bodyData.formValues.location,
+      bodyData.formValues.how_did_you_find_us,
+      bodyData.formValues.your_thoughts,
+    ]
+  );
 });
