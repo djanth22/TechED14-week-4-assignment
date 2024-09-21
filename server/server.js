@@ -21,8 +21,11 @@ app.get("/", (req, res) => {
   res.json({ message: "this is the root route" });
 });
 
-app.get("/feedback", (req, res) => {
-  res.json({ message: "feedback" });
+app.get("/feedback", async (req, res) => {
+  const data = await db.query(`SELECT * FROM feedback`);
+  console.log(data.rows);
+
+  res.json(data.rows);
 });
 
 app.post("/newFeedback", (req, res) => {
