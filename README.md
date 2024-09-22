@@ -4,7 +4,7 @@
 
 # github repo link: https://github.com/djanth22/TechED14-week-4-assignment
 
-![wireframe](public/ok-so.png)
+![wireframe](/client/public/ok_so.png)
 
 Reflection
 Please also provide an assignment reflection in your project README.md file.
