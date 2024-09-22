@@ -40,10 +40,10 @@ async function database() {
     const thoughts = document.createElement("p");
     thoughts.classList.add(`info`);
 
-    name.textContent = a.name;
-    location.textContent = a.location;
-    findUs.textContent = a.how_did_you_find_us;
-    thoughts.textContent = a.your_thoughts;
+    name.textContent = "name: " + a.name;
+    location.textContent = "location: " + a.location;
+    findUs.textContent = "how you found us: " + a.how_did_you_find_us;
+    thoughts.textContent = "your thoughts: " + a.your_thoughts;
 
     container.appendChild(name);
     container.appendChild(location);

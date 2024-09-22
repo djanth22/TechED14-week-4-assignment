@@ -6,3 +6,32 @@ h1 {
   background-color: antiquewhite;
   border: 3px, black, solid;
 }
+
+.section {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: azure;
+  margin: 3px;
+}
+
+.info {
+  margin: 8px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.submit {
+  margin-top: 20px;
+}
+
+.input-label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #bebeff;
+}
