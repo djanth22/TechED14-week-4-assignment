@@ -1,10 +1,16 @@
 body {
-  background-color: aqua;
+  background-color: rgb(55, 0, 0);
+  color: rgb(130, 255, 251);
+  text-align: center;
+  background-image: url(knot.jpg);
+  width: auto;
+  background-position: center;
 }
 
 h1 {
-  background-color: antiquewhite;
-  border: 3px, black, solid;
+  background-color: rgb(85, 0, 0);
+  border: 3px, #9d1616, solid;
+  border-radius: 20px;
 }
 
 .section {
@@ -12,8 +18,11 @@ h1 {
   text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: azure;
+  background-color: rgb(88, 14, 14);
   margin: 3px;
+  border: 3px, rgb(130, 39, 39), solid;
+  background-image: url(knot2-v2.jpg);
+  background-position: center;
 }
 
 .info {
@@ -28,10 +37,27 @@ h1 {
 
 .submit {
   margin-top: 20px;
+  background-color: #701313;
+  color: rgb(0, 255, 187);
+  border-radius: 30px;
+  border: 3px, rgb(155, 0, 0), solid;
+  padding: 5px;
 }
 
 .input-label {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #bebeff;
+  background-color: #701313;
+  padding: 8px;
+  border-radius: 20px;
+  border: 3px, #9d1616, solid;
+}
+
+.input {
+  background-color: #41e2c4;
+  color: #701313;
+  height: 30px;
+  font-size: larger;
+  font-weight: 800;
+  text-align: center;
 }

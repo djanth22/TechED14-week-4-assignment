@@ -28,19 +28,20 @@
       </section>
       <form id="form">
         <label for="name" type="text" class="input-label">name</label>
-        <input type="text" name="name" class="input" />
+        <input type="text" name="name" class="input" required />
         <label for="location" class="input-label">location</label>
-        <input type="text" name="location" class="input" />
+        <input type="text" name="location" class="input" required />
         <label for="favourite colour" class="input-label"
           >how did you find us</label
         >
-        <input type="text" name="how_did_you_find_us" class="input" />
+        <input type="text" name="how_did_you_find_us" class="input" required />
         <label for="favourite animal" class="input-label">your thoughts</label>
-        <input type="text" name="your_thoughts" class="input" />
-        <button type="submit" class="submit">submit</button>
+        <input type="text" name="your_thoughts" class="input" required />
+        <button type="submit" class="submit" id="submit-button">submit</button>
       </form>
       <section id="feedback-section">
         <h2 class="title">Feedback from previous customers</h2>
+        <p>refresh the page and you will see your feedback here</p>
         <div id="feedback-container"></div>
       </section>
     </main>

@@ -1,6 +1,5 @@
 console.log("test");
 
-// form handler and listener
 const feedbackForm = document.getElementById("form");
 
 function handleSubmit(event) {
@@ -16,16 +15,7 @@ function handleSubmit(event) {
   });
 }
 
-function reload() {
-  window.location.reload;
-}
-
 feedbackForm.addEventListener("submit", handleSubmit);
-feedbackForm.addEventListener("submit", reload);
-
-// attempting to get the database rendered on screen by creating elements
-// testing imported stuff from other js on server to use for getting the server information
-// will need a foreach loop here somewhere
 
 const feedbackContainer = document.getElementById(`feedback-container`);
 
