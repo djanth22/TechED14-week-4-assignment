@@ -1,10 +1,10 @@
-#server link: https://teched14-week-4-assignment.onrender.com
+# server link: https://teched14-week-4-assignment.onrender.com
 
-#client link: https://teched14-week-4-assignment-1.onrender.com
+# client link: https://teched14-week-4-assignment-1.onrender.com
 
-#github repo link: https://github.com/djanth22/TechED14-week-4-assignment
+# github repo link: https://github.com/djanth22/TechED14-week-4-assignment
 
-![wireframe](client/public/ok so.png)
+![wireframe](client/public/ok-so.png)
 
 Reflection
 Please also provide an assignment reflection in your project README.md file.
