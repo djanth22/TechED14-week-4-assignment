@@ -16,7 +16,12 @@ function handleSubmit(event) {
   });
 }
 
+function reload() {
+  window.location.reload;
+}
+
 feedbackForm.addEventListener("submit", handleSubmit);
+feedbackForm.addEventListener("submit", reload);
 
 // attempting to get the database rendered on screen by creating elements
 // testing imported stuff from other js on server to use for getting the server information
@@ -30,7 +35,10 @@ async function database() {
   );
   const table = await dbData.json();
   console.log(table);
-  table.forEach(function (a) {
+  const tableRev = table.reverse();
+  console.log(tableRev);
+
+  tableRev.forEach(function (a) {
     const container = document.createElement("section");
     container.classList.add(`section`);
     const name = document.createElement("p");
