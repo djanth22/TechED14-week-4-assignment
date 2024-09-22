@@ -7,7 +7,7 @@ function handleSubmit(event) {
   event.preventDefault();
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
-  fetch(`http://localhost:8080/newFeedback`, {
+  fetch(`https://teched14-week-4-assignment.onrender.com/newFeedback`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -25,7 +25,9 @@ feedbackForm.addEventListener("submit", handleSubmit);
 const feedbackContainer = document.getElementById(`feedback-container`);
 
 async function database() {
-  const dbData = await fetch(`http://localhost:8080/feedback`);
+  const dbData = await fetch(
+    `https://teched14-week-4-assignment.onrender.com/feedback`
+  );
   const table = await dbData.json();
   console.log(table);
   table.forEach(function (a) {
