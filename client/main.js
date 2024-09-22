@@ -28,6 +28,30 @@ async function database() {
   const dbData = await fetch(`http://localhost:8080/feedback`);
   const table = await dbData.json();
   console.log(table);
+  table.forEach(function (a) {
+    const container = document.createElement("section");
+    container.classList.add(`section`);
+    const name = document.createElement("p");
+    name.classList.add(`info`);
+    const location = document.createElement("p");
+    location.classList.add(`info`);
+    const findUs = document.createElement("p");
+    findUs.classList.add(`info`);
+    const thoughts = document.createElement("p");
+    thoughts.classList.add(`info`);
+
+    name.textContent = a.name;
+    location.textContent = a.location;
+    findUs.textContent = a.how_did_you_find_us;
+    thoughts.textContent = a.your_thoughts;
+
+    container.appendChild(name);
+    container.appendChild(location);
+    container.appendChild(findUs);
+    container.appendChild(thoughts);
+
+    feedbackContainer.appendChild(container);
+  });
 }
 
 database();
